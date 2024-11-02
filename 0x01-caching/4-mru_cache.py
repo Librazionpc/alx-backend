@@ -20,7 +20,6 @@ class MRUCache(BaseCaching):
                 mru_key = self.stack.pop()
                 print( "DISCARD: {}".format(mru_key))
                 del self.cache_data[mru_key]
-
             self.cache_data[key] = item
             self.queue.append(key)
 

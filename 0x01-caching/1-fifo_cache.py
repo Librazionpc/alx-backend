@@ -9,7 +9,7 @@ class FIFOCache(BaseCaching):
         """ Constructor """
         super().__init__()
         self.key = []
-        
+
     def put(self, key, item):
         """ Put an item in the cache """
         if key and item:

@@ -20,11 +20,8 @@ class LRUCache(BaseCaching):
                 lru_key = self.queue.popleft()
                 print( "DISCARD: {}".format(lru_key))
                 del self.cache_data[lru_key]
-            
-
             self.cache_data[key] = item
             self.queue.append(key)
-
 
         def get(self, key):
             """ Get an item by key """
